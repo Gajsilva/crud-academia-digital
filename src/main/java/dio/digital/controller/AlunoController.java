@@ -30,9 +30,9 @@ public class AlunoController {
     return new ResponseEntity<>(service.create(form), HttpStatus.CREATED);
   }
 
-  @GetMapping("/avaliacoes/{id}")
+  @GetMapping("/{id}")
   public List<AvaliacaoFisica> getAllAvaliacaoFisicaId(@PathVariable Long id) {
-    verifyIfExistsId(id);
+    service.verifyExistId(id);
     return service.getAllAvaliacaoFisicaId(id);
   }
   @GetMapping
@@ -41,25 +41,20 @@ public class AlunoController {
     return service.getAll(dataDeNacimento);
   }
 
-  @PutMapping("/update/{id}")
+  @PutMapping("/{id}")
   public ResponseEntity<?> update(@PathVariable Long id, @RequestBody AlunoUpdateForm form){
-    verifyIfExistsId(id);
+    service.verifyExistId(id);
     return new ResponseEntity<> (service.update(id, form), HttpStatus.OK);
   }
 
-  @DeleteMapping("/delete/{id}")
+  @DeleteMapping("/{id}")
   public ResponseEntity<?>  delete(@PathVariable Long id){
-    verifyIfExistsId(id);
+    service.verifyExistId(id);
     service.delete(id);
     return new ResponseEntity<> (HttpStatus.OK);
   }
 
 
-  private boolean verifyIfExistsId(Long id){
-    if (verifyIfExistsId(id))
-      throw new ResourceNotFoundException("Aluno not found for id: "+id);
 
-    return false;
-  }
 
 }

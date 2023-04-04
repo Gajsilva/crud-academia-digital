@@ -1,9 +1,11 @@
 package dio.digital.service;
 
+
 import dio.digital.entity.Matricula;
 import dio.digital.entity.form.MatriculaForm;
 
 import java.util.List;
+
 
 public interface IMatriculaService {
   /**
@@ -32,4 +34,13 @@ public interface IMatriculaService {
    */
   void delete(Long id);
 
+  /**
+   * Retorna Matricula que está no banco de dados de acordo com seu Id.
+   * Criado para verificar se existe um Id se não retornar uma exceção.
+   *
+   * @param id id da matricula que será exibido.
+   * @return Aluno de acordo com o Id fornecido.
+   */
+
+  void verifyExistId(Long id);
 }

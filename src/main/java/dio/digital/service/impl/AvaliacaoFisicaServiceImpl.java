@@ -1,5 +1,6 @@
 package dio.digital.service.impl;
 
+import dio.digital.error.ResourceNotFoundException;
 import dio.digital.repository.AlunoRepository;
 import dio.digital.repository.AvaliacaoFisicaRepository;
 import dio.digital.entity.Aluno;
@@ -58,6 +59,13 @@ public class AvaliacaoFisicaServiceImpl implements IAvaliacaoFisicaService {
   @Override
   public void delete(Long id) {
     avaliacaoFisicaRepository.deleteById(id);
+  }
+
+  @Override
+  public void verifyExistId(Long id){
+    if(!avaliacaoFisicaRepository.existsById(id)){
+      throw new ResourceNotFoundException("Avaliaçao Fisica not found id: "+id);
+    }
   }
 
 

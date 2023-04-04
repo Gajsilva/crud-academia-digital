@@ -77,7 +77,9 @@ public class AlunoServiceImpl implements IAlunoService {
   }
   @Override
   public void verifyExistId(Long id){
-    repository.findById(id).orElse(null);
+    if(!repository.existsById(id)){
+        throw new ResourceNotFoundException("Aluno not found id: "+id);
+    }
   }
 
 

@@ -54,6 +54,13 @@ public interface IAlunoService {
    * @return uma lista com todas as avaliações do aluno de acordo com o Id
    */
   List<AvaliacaoFisica> getAllAvaliacaoFisicaId(Long id);
-
+  /**
+   * Retorna um Aluno que está no banco de dados de acordo com seu Id.
+   * Criado para verificar se existe um Id se não retornar uma exceção.
+   *
+   * @param id id do Aluno que será exibido.
+   * @return Aluno de acordo com o Id fornecido.
+   */
   void verifyExistId(Long id);
+
 }

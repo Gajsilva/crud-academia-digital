@@ -1,11 +1,12 @@
 package dio.digital.service.impl;
 
-import dio.digital.repository.AlunoRepository;
-import dio.digital.repository.MatriculaRepository;
-import dio.digital.service.IMatriculaService;
 import dio.digital.entity.Aluno;
 import dio.digital.entity.Matricula;
 import dio.digital.entity.form.MatriculaForm;
+import dio.digital.error.ResourceNotFoundException;
+import dio.digital.repository.AlunoRepository;
+import dio.digital.repository.MatriculaRepository;
+import dio.digital.service.IMatriculaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -38,9 +39,9 @@ public class MatriculaServiceImpl implements IMatriculaService {
   @Override
   public List<Matricula> getAll(String bairro) {
 
-    if (bairro == null) {
+    if(bairro == null){
       return matriculaRepository.findAll();
-    } else {
+    }else{
       return matriculaRepository.findAlunosMatriculadosBairro(bairro);
     }
 
@@ -50,4 +51,13 @@ public class MatriculaServiceImpl implements IMatriculaService {
   public void delete(Long id) {
     matriculaRepository.deleteById(id);
   }
+
+  @Override
+  public void verifyExistId(Long id){
+    if(!matriculaRepository.existsById(id)){
+      throw new ResourceNotFoundException("Matricula not found id: "+id);
+    }
+  }
+
+
 }

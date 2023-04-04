@@ -2,8 +2,6 @@ package dio.digital.controller;
 
 import dio.digital.entity.Matricula;
 import dio.digital.entity.form.MatriculaForm;
-import dio.digital.error.ResourceNotFoundException;
-import dio.digital.repository.MatriculaRepository;
 import dio.digital.service.impl.MatriculaServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,8 +17,7 @@ public class MatriculaController {
 
   @Autowired
   private MatriculaServiceImpl service;
-  @Autowired
-  private MatriculaRepository matriculaRepository;
+
   @PostMapping
   public Matricula create(@Valid @RequestBody MatriculaForm form) {
     return service.create(form);
@@ -31,17 +28,13 @@ public class MatriculaController {
     return service.getAll(bairro);
   }
 
-  @DeleteMapping("/delete/{id}")
-  public ResponseEntity<?> delete(@PathVariable long id){
-    verifyId(id);
+  @DeleteMapping("/{id}")
+  public ResponseEntity<?> delete(@PathVariable Long id){
+    service.verifyExistId(id);
     service.delete(id);
     return new ResponseEntity<>(HttpStatus.OK);
   }
 
-  private void verifyId(Long id){
-    if(matriculaRepository.findById(id).isEmpty())
-      throw new ResourceNotFoundException("Matricula not found for id: "+id);
-  }
 
 }
 

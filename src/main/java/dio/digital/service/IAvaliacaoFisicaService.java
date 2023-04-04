@@ -42,4 +42,11 @@ public interface  IAvaliacaoFisicaService {
    * @param id - id da Avaliação Física que será removida.
    */
   void delete(Long id);
+  /**
+   * Retorna uma Avaliação que está no banco de dados de acordo com seu Id.
+   * Criado para verificar se existe um Id se não retornar uma exceção.
+   * @param id id da Avaliação que será exibido.
+   * @return Avaliação de acordo com o Id fornecido.
+   */
+  void verifyExistId(Long id);
 }

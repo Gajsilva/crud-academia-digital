@@ -109,7 +109,7 @@ Indica qual é o lado inverso ou não dominante da relação.
     <li>DELETE /matriculas/{id}: Excluir uma matricula por id.</li>
     
     
-<ul>
+</ul>
     
     
 <h2>Testando a API</h2>

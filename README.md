@@ -86,11 +86,14 @@ Indica qual é o lado inverso ou não dominante da relação.
 Pontos de extremidade da API
 A API fornece os seguintes pontos de extremidade:
 
-GET /produtos: Obtenha todos os produtos.
-GET /products/{id}: Obter um produto por id.
-POST /products: Crie um novo produto.
-PUT /products/{id}: Atualize um produto por id.
-DELETE /products/{id}: Excluir um produto por id.
+<ol>
+    <li>GET /produtos: Obtenha todos os produtos.</li>
+    <li>GET /products/{id}: Obter um produto por id.</li>
+    <li>POST /products: Crie um novo produto.</li>
+    <li>PUT /products/{id}: Atualize um produto por id.</li>
+    <li>DELETE /products/{id}: Excluir um produto por id.</li>
+<ol>
+    
 Testando a API
 Você pode testar a API usando qualquer cliente REST, como Postman ou curl. Aqui estão alguns exemplos de solicitações:
 

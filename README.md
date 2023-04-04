@@ -87,28 +87,28 @@ Indica qual é o lado inverso ou não dominante da relação.
 
 <h3>A API fornece os seguintes pontos de extremidade:</h3>
 
-<ol>
+<ul>
     <li>GET /alunos: Obtenha todos os alunos.</li>
     <li>GET /alunos/{id}: Obter um aluno por id.</li>
     <li>POST /alunos: Crie um novo aluno.</li>
     <li>PUT /alunos/{id}: Atualize um aluno por id.</li>
     <li>DELETE /alunos/{id}: Excluir um aluno por id.</li>
-<ol>
+<ul>
     
-<ol>
+<ul>
     <li>GET /avaliacoes: Obtenha todas as avaliações.</li>
     <li>GET /avalicoes/{id}: Obter uma avaliação por id.</li>
     <li>POST /avaliacoes: Crie um nova avalicao.</li>
     <li>PUT /avaliacoes/{id}: Atualize uma avaliacao por id.</li>
     <li>DELETE /avaliacoes/{id}: Excluir uma avaliacao por id.</li>
-<ol>
+<ul>
 
-<ol>
+<ul>
     <li>GET /matriculas: Obtenha todas as matriculas.</li>
     <li>GET /matriculas/{id}: Obter uma matricula por id.</li>
     <li>POST /matriculas: Crie um nova matricula.</li>
     <li>DELETE /matriculas/{id}: Excluir uma matricula por id.</li>
-<ol>
+<ul>
     
 <h2>Testando a API</h2>
     

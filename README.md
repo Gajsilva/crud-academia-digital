@@ -31,7 +31,8 @@
     <li>Maven</li>
     <li><strong>Spring Web</strong></li>
     <li><strong>Spring Data JPA</strong></li>
-    <li><strong>PostgreSQL Driver</strong></li>
+    <li><strong>Mysql</strong></li>
+    <li><strong>Workbench</strong></li>
     <li><strong>Hibernate Validator</strong></li>
     <li>Lombok</li>
     <li>Postman</li>
@@ -112,18 +113,13 @@ Indica qual é o lado inverso ou não dominante da relação.
     
 <h3>Você pode testar a API usando qualquer cliente REST, como Postman ou curl. Aqui estão alguns exemplos de solicitações:</h3>
 
-Obtenha todos os produtos:
-bash
-Copy code
-GET http://localhost:8080/products
-Obter um produto por id:
-bash
-Copy code
-GET http://localhost:8080/products/1
-Crie um novo produto:
-bash
-Copy code
-POST http://localhost:8080/products
+<ul>
+    <li>Obtenha todos os produtos: GET http://localhost:8080/aluno </li>
+
+    <li>GET http://localhost:8080/aluno/1  Obter um produto por id:</li>
+
+
+    <li>Crie um novo produto: bashCopy code POST http://localhost:8080/products</li>
 Content-Type: application/json
 
 {
@@ -147,6 +143,7 @@ bash
 Copy code
 DELETE http://localhost:8080/products/1
 
+</ul>
 
 
 <h2> 🤝 Contribuindo </h2>

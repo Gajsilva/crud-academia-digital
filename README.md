@@ -83,19 +83,36 @@ Indica qual é o lado inverso ou não dominante da relação.
 
 </ul>
 
-Pontos de extremidade da API
-A API fornece os seguintes pontos de extremidade:
+<h2>Pontos de extremidade da API</h2>
+
+<h3>A API fornece os seguintes pontos de extremidade:</h3>
 
 <ol>
-    <li>GET /produtos: Obtenha todos os produtos.</li>
-    <li>GET /products/{id}: Obter um produto por id.</li>
-    <li>POST /products: Crie um novo produto.</li>
-    <li>PUT /products/{id}: Atualize um produto por id.</li>
-    <li>DELETE /products/{id}: Excluir um produto por id.</li>
+    <li>GET /alunos: Obtenha todos os alunos.</li>
+    <li>GET /alunos/{id}: Obter um aluno por id.</li>
+    <li>POST /alunos: Crie um novo aluno.</li>
+    <li>PUT /alunos/{id}: Atualize um aluno por id.</li>
+    <li>DELETE /alunos/{id}: Excluir um aluno por id.</li>
 <ol>
     
-Testando a API
-Você pode testar a API usando qualquer cliente REST, como Postman ou curl. Aqui estão alguns exemplos de solicitações:
+<ol>
+    <li>GET /avaliacoes: Obtenha todas as avaliações.</li>
+    <li>GET /avalicoes/{id}: Obter uma avaliação por id.</li>
+    <li>POST /avaliacoes: Crie um nova avalicao.</li>
+    <li>PUT /avaliacoes/{id}: Atualize uma avaliacao por id.</li>
+    <li>DELETE /avaliacoes/{id}: Excluir uma avaliacao por id.</li>
+<ol>
+
+<ol>
+    <li>GET /matriculas: Obtenha todas as matriculas.</li>
+    <li>GET /matriculas/{id}: Obter uma matricula por id.</li>
+    <li>POST /matriculas: Crie um nova matricula.</li>
+    <li>DELETE /matriculas/{id}: Excluir uma matricula por id.</li>
+<ol>
+    
+<h2>Testando a API</h2>
+    
+<h3>Você pode testar a API usando qualquer cliente REST, como Postman ou curl. Aqui estão alguns exemplos de solicitações:</h3>
 
 Obtenha todos os produtos:
 bash

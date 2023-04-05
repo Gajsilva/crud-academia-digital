@@ -131,7 +131,8 @@ Indica qual é o lado inverso ou não dominante da relação.
     </br>
     "dataDeNascimento": "01/01/1991"
     </br>
-} </li> 
+} </li>
+</br>
 Atualizar um produto por id:
 </br>
 PUT http://localhost:8080/alunos/1
@@ -139,6 +140,7 @@ PUT http://localhost:8080/alunos/1
 Content-Type: application/json
 </br>
 {
+</br>
     "nome": "Aluno",
     </br>
     "bairro": "Village",

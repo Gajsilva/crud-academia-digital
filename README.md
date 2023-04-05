@@ -123,26 +123,33 @@ Indica qual é o lado inverso ou não dominante da relação.
         </br>
 <li> {
     </br>
-    "name": "Product 1",
-    "description": "This is product 1",
-    "price": 10.0
+    "nome": "Aluno",
+    </br>
+    "cpf": "111-222-333-44"
+    </br>
+    "bairro": "Village",
+    </br>
+    "dataDeNascimento": "01/01/1991"
+    </br>
 } </li> 
 Atualizar um produto por id:
-bash
-Copy code
-PUT http://localhost:8080/products/1
+</br>
+PUT http://localhost:8080/alunos/1
+</br>
 Content-Type: application/json
-
+</br>
 {
-    "name": "Product 1 Updated",
-    "description": "This is product 1 updated",
-    "price": 20.0
+    "nome": "Aluno",
+    </br>
+    "bairro": "Village",
+    </br>
+    "dataDeNascimento": "01/01/1991"
+    </br>
 }
-Excluir um produto por id:
-bash
-Copy code
-DELETE http://localhost:8080/products/1
-
+</br>
+<li>Excluir um produto por id:
+</br>
+DELETE http://localhost:8080/aluno/1<li>
 </ul>
 
 

@@ -115,18 +115,17 @@ Indica qual é o lado inverso ou não dominante da relação.
 
 <ul>
     <li>Obtenha todos os produtos: GET http://localhost:8080/aluno </li>
-
+        </br>
     <li>GET http://localhost:8080/aluno/1  Obter um produto por id:</li>
-
-
+        </br>
     <li>Crie um novo produto: bashCopy code POST http://localhost:8080/products</li>
-Content-Type: application/json
-
-{
+    <li>Content-Type: application/json</li>
+        </br>
+<li> {
     "name": "Product 1",
     "description": "This is product 1",
     "price": 10.0
-}
+} </li> 
 Atualizar um produto por id:
 bash
 Copy code

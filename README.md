@@ -122,6 +122,7 @@ Indica qual é o lado inverso ou não dominante da relação.
     <li>Content-Type: application/json</li>
         </br>
 <li> {
+    </br>
     "name": "Product 1",
     "description": "This is product 1",
     "price": 10.0

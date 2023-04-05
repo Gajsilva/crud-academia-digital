@@ -154,6 +154,9 @@ Content-Type: application/json
 DELETE http://localhost:8080/aluno/1<li>
 </ul>
 
+<p> Avaliações e matriculas so podem ser feitas de exister um aluno</p>
+<p> Cpf do aluno não pode ser repetido e alterado na requisição put</p>
+<p> Matricula não pode ser alterada
 
 <h2> 🤝 Contribuindo </h2>
 
